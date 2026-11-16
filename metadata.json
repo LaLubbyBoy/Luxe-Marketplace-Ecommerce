@@ -1,0 +1,6 @@
+{
+  "name": "LuxeStore - Premium E-Commerce & Shopping Platform",
+  "description": "Discover high-end electronics, fashion, lifestyle goods, and beauty essentials with secure payments and fast nationwide delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,809 @@
+MASTER PROMPT: FULL WEBSITE AUDIT, SYSTEM SCAN, BUG DETECTION AND AUTOMATIC REPAIR
+YOUR ROLE
+Act as a senior full-stack software engineer, software architect, QA automation engineer, cybersecurity specialist, database administrator and professional debugging expert.
+Your task is to perform a COMPLETE TECHNICAL AUDIT of the entire existing e-commerce application.
+You must inspect every part of the website, identify everything that is broken, incomplete, incorrectly implemented, disconnected, insecure, poorly optimized or not functioning as intended.
+After identifying the problems, FIX THEM.
+Do not simply generate a report of problems. You are authorized to modify the existing codebase, repair broken functionality, complete missing implementations and improve the application.
+IMPORTANT: Work directly on the existing project. Do not create a new website, replace the existing application or unnecessarily redesign working components.
+Preserve all existing working features and the current brand identity.
+PHASE 1: COMPLETE CODEBASE INSPECTION
+Scan the entire project, including:
+Frontend components.
+Backend services.
+API endpoints.
+Database configuration.
+Firebase integration.
+Authentication system.
+Firestore database.
+Firestore security rules.
+Firebase Storage.
+Payment integrations.
+Administrator dashboard.
+Customer dashboard.
+Routing and navigation.
+State management.
+Environment variables.
+Third-party integrations.
+Dependencies and packages.
+Application configuration.
+Inspect every relevant file and identify:
+Missing files.
+Incomplete components.
+Broken imports.
+Incorrect file references.
+Duplicate code.
+Unused components.
+Incorrect dependencies.
+Outdated packages.
+TypeScript errors.
+JavaScript errors.
+Build errors.
+Runtime errors.
+Configuration problems.
+Check for architectural inconsistencies and incorrect implementation patterns.
+PHASE 2: FRONTEND FUNCTIONALITY AUDIT
+Inspect every page and component.
+Check:
+Homepage.
+Navigation bar.
+Search bar.
+Product categories.
+Product listings.
+Product details.
+Shopping cart.
+Checkout.
+Login page.
+Registration page.
+Customer dashboard.
+Wishlist.
+Order tracking.
+Contact page.
+About page.
+Footer.
+Administrator login.
+Administrator dashboard.
+Product management.
+Order management.
+Customer management.
+Inventory management.
+Analytics.
+For every page, verify:
+Does the page load correctly?
+Does the layout display properly?
+Are all buttons functional?
+Do all links navigate correctly?
+Do forms submit successfully?
+Is the data displayed correctly?
+Are loading states implemented?
+Are error messages displayed properly?
+Are empty states handled?
+Does the page work on mobile devices?
+Identify and repair:
+Non-functional buttons.
+Broken navigation.
+Incorrect redirects.
+Missing pages.
+Broken forms.
+Incorrect product displays.
+Search failures.
+Filtering failures.
+Cart calculation errors.
+Layout inconsistencies.
+Responsive design problems.
+Console errors.
+Do not leave decorative buttons pretending to perform real actions.
+PHASE 3: BACKEND AND API AUDIT
+Inspect the entire backend.
+Check:
+API routes.
+Request handling.
+Response handling.
+Database operations.
+Authentication middleware.
+Authorization middleware.
+Input validation.
+Error handling.
+Server-side logic.
+External API integrations.
+Verify that every frontend operation communicates correctly with the backend.
+Identify:
+Missing API endpoints.
+Broken endpoints.
+Incorrect HTTP methods.
+Incorrect request parameters.
+Incorrect response structures.
+Missing validation.
+Unhandled exceptions.
+Incorrect database queries.
+Broken integrations.
+Missing server-side functionality.
+Repair all identified problems.
+Ensure that the frontend never relies on fabricated data when real database data should be used.
+PHASE 4: FIREBASE AND DATABASE AUDIT
+Perform a comprehensive Firebase inspection.
+Check:
+Firebase Authentication
+Registration.
+Login.
+Logout.
+Google authentication.
+Email verification.
+Password reset.
+Session persistence.
+Authentication state management.
+Cloud Firestore
+Verify that:
+Database connections work.
+Collections exist.
+Documents are created correctly.
+Documents are updated correctly.
+Documents are deleted correctly.
+Data is retrieved correctly.
+Database queries work.
+Required indexes exist.
+Data relationships are handled correctly.
+Inspect all relevant collections:
+users
+customerProfiles
+products
+categories
+productVariants
+inventory
+carts
+wishlists
+orders
+orderItems
+payments
+addresses
+coupons
+reviews
+notifications
+refunds
+shipments
+adminActivityLogs
+Check for missing fields, incorrect document structures, duplicate records and inconsistent data.
+Firestore Security Rules
+Verify that:
+Customers can only access their authorized information.
+Customers cannot modify administrator privileges.
+Administrators have appropriate permissions.
+Unauthorized users cannot access protected information.
+Payment records cannot be manipulated by customers.
+Order information is properly protected.
+Inventory cannot be manipulated through unauthorized client requests.
+Fix security rule vulnerabilities.
+Do not make the database publicly accessible to solve permission errors.
+PHASE 5: CUSTOMER FUNCTIONALITY AUDIT
+Test the complete customer shopping experience.
+Simulate the following workflow:
+Open the homepage.
+Browse product categories.
+Search for a product.
+Open a product details page.
+Select a product variation.
+Add the product to the cart.
+Update product quantity.
+Remove a product.
+Add a product to the wishlist.
+Register a customer account.
+Log in.
+Add products to the cart.
+Proceed to checkout.
+Enter delivery information.
+Select a payment method.
+Complete a test payment where supported.
+Verify the payment.
+Create an order.
+View the order in the customer dashboard.
+Track the order.
+Verify that every step works correctly.
+Check that cart information persists after refreshing the page or logging in.
+Check that orders are correctly associated with the authenticated customer.
+PHASE 6: ADMINISTRATOR FUNCTIONALITY AUDIT
+Test the complete administrator experience.
+Verify that administrators can:
+Log in securely.
+View dashboard statistics.
+Add products.
+Edit products.
+Delete products.
+Upload product images.
+Create categories.
+Update product prices.
+Manage product variations.
+Update stock quantities.
+View customer accounts.
+View orders.
+Update order statuses.
+Verify payments.
+Manage discount codes.
+View sales analytics.
+Export reports.
+View notifications.
+Verify that changes made by administrators appear correctly on the customer-facing website.
+Check that unauthorized customers cannot access administrator routes or perform administrator operations.
+PHASE 7: PAYMENT SYSTEM AUDIT
+Inspect Paystack and Flutterwave integrations.
+Verify:
+Payment initialization.
+Transaction reference generation.
+Payment provider communication.
+Payment verification.
+Webhook processing.
+Webhook signature verification.
+Successful payments.
+Failed payments.
+Duplicate webhook handling.
+Order creation after verified payment.
+Inventory updates.
+Payment status synchronization.
+Refund handling.
+IMPORTANT:
+Never mark an order as paid simply because the customer reaches a payment success page.
+Only accept verified payment results from the payment provider.
+Use test mode for payment testing.
+Never use real customer funds during automated testing.
+If API credentials are unavailable, identify the missing configuration and test the remaining payment architecture without pretending that real payment processing works.
+PHASE 8: SECURITY AUDIT
+Perform a comprehensive application security review.
+Inspect for:
+Unauthorized administrator access.
+Broken authentication.
+Broken authorization.
+Insecure database rules.
+Exposed API keys.
+Exposed environment variables.
+Hardcoded credentials.
+Weak input validation.
+XSS vulnerabilities.
+CSRF vulnerabilities where applicable.
+Injection vulnerabilities.
+Insecure file uploads.
+Information leakage.
+Insecure API endpoints.
+Insecure payment processing.
+Session management vulnerabilities.
+Excessive permissions.
+Fix identified vulnerabilities.
+Never expose secret credentials in frontend code.
+Do not disable security protections to make functionality work.
+PHASE 9: PERFORMANCE AND SEO AUDIT
+Check:
+Website loading speed.
+Image optimization.
+Unnecessary component rendering.
+Large dependencies.
+Database query efficiency.
+API response performance.
+Lazy loading.
+Caching.
+Mobile performance.
+Accessibility.
+SEO metadata.
+Product page indexing.
+Sitemap.
+Robots.txt.
+Improve performance without breaking existing functionality.
+PHASE 10: AUTOMATED TESTING AND DEBUGGING
+Run all available project checks.
+Execute appropriate commands such as:
+TypeScript type checking.
+ESLint.
+Production build.
+Unit tests.
+Integration tests.
+End-to-end tests.
+Use the available browser preview to test the application.
+Inspect:
+Browser console.
+Network requests.
+Failed API responses.
+Server logs.
+Database errors.
+Authentication errors.
+Create or improve automated tests for critical workflows.
+Fix all errors that can be reproduced.
+Do not simply suppress errors or hide warnings without addressing their underlying causes.
+PHASE 11: AUTOMATIC REPAIR
+After completing the inspection:
+Compile a list of all identified problems.
+Categorize them by severity.
+Fix critical issues first.
+Fix high-priority issues.
+Fix medium-priority issues.
+Fix low-priority issues.
+Complete missing functionality.
+Repair broken integrations.
+Improve incorrect implementations.
+Retest every repaired feature.
+Use the following severity levels:
+CRITICAL:
+Security vulnerabilities, payment manipulation, data loss, unauthorized access and application-breaking errors.
+HIGH:
+Broken authentication, checkout failures, database failures, order processing failures and administrator functionality failures.
+MEDIUM:
+Broken search, filtering, notifications, dashboard components and incomplete features.
+LOW:
+Minor UI issues, spacing problems, typography inconsistencies and non-critical performance improvements.
+Do not make unnecessary changes to working functionality.
+PHASE 12: FINAL VERIFICATION
+After completing all repairs, run the full test suite again.
+Confirm:
+The application builds successfully.
+No critical runtime errors remain.
+Customer authentication works.
+Administrator authentication works.
+Database operations work.
+Product management works.
+Shopping cart works.
+Checkout works.
+Payment verification works in test mode.
+Order management works.
+Order tracking works.
+Inventory updates work.
+Firestore security rules are enforced.
+Mobile responsiveness works.
+Navigation works.
+No critical broken links remain.
+Do not claim that something has passed testing unless it has actually been tested.
+PHASE 13: FINAL AUDIT REPORT
+When the audit and repair process is complete, provide a detailed report containing:
+1. Overall Website Status
+General application health.
+Build status.
+Backend status.
+Database status.
+Authentication status.
+Payment integration status.
+2. Problems Discovered
+List every identified issue and its severity.
+3. Problems Fixed
+Explain what was repaired and which files or components were modified.
+4. Incomplete Features
+Identify features that still need implementation.
+5. External Configuration Required
+List integrations that require API keys, credentials or manual configuration.
+6. Security Findings
+Report security vulnerabilities discovered and their repair status.
+7. Testing Results
+Show the tests performed and their actual results.
+8. Remaining Issues
+Clearly identify anything that could not be fixed or verified.
+9. Final Readiness Assessment
+Classify the application as:
+NOT READY.
+NEEDS FURTHER WORK.
+READY FOR STAGING.
+READY FOR PRODUCTION.
+Only mark the application READY FOR PRODUCTION if all critical functionality, security requirements and production configuration have been verified.
+FINAL INSTRUCTION
+Perform a complete, systematic scan of the EXISTING APPLICATION.
+Do not stop after reviewing the homepage.
+Do not stop after generating a list of problems.
+Inspect the entire codebase, test the application, identify issues, repair them directly, and verify the repairs.
+Preserve all working functionality.
+Do not replace the existing application with a newly generated project.
+If you encounter missing credentials or external services that cannot be accessed, document the limitation and continue auditing everything else.
+Your ultimate objective is to transform the existing e-commerce website into a stable, secure, fully functional, professional application that is ready for real-world use.
+BEGIN THE FULL AUDIT AND AUTOMATIC REPAIR PROCESS NOW....# FULL WEBSITE AUDIT, SYSTEM DIAGNOSTICS, BUG DETECTION AND AUTOMATIC REPAIR
+ROLE
+Act as a senior software engineer, full-stack developer, software tester, cybersecurity auditor, database administrator and quality assurance specialist.
+Your task is to conduct a COMPLETE TECHNICAL AUDIT of the entire existing e-commerce application.
+Do not simply review the homepage or inspect the visual design.
+Scan the entire project, including:
+Frontend.
+Backend.
+Database.
+Authentication.
+API endpoints.
+Payment integrations.
+Customer dashboard.
+Administrator dashboard.
+Product management.
+Shopping cart.
+Checkout.
+Order management.
+Inventory management.
+Notifications.
+Security.
+Responsiveness.
+Performance.
+SEO.
+Deployment configuration.
+Your objective is to identify EVERYTHING that is broken, missing, incomplete, incorrectly implemented, disconnected or poorly optimized, and FIX IT.
+IMPORTANT: You have permission to inspect and modify the existing project files to repair identified problems. Preserve existing working functionality and the established design.
+PHASE 1: COMPLETE PROJECT SCAN
+Inspect the entire project directory.
+Examine all source code files.
+Examine the project folder structure.
+Identify unused components.
+Identify missing dependencies.
+Identify incorrect imports and exports.
+Identify duplicate components.
+Identify broken routes.
+Identify incomplete functions.
+Identify placeholder implementations.
+Identify hardcoded data that should come from the database.
+Identify disconnected frontend and backend components.
+Identify configuration errors.
+Identify missing environment variables.
+Identify console errors and warnings.
+Identify TypeScript errors.
+Identify build errors.
+Do not assume that a feature works simply because its interface exists.
+Inspect its actual implementation.
+PHASE 2: FRONTEND AUDIT
+Inspect every website page and interactive component.
+Check:
+Homepage.
+Navigation bar.
+Product categories.
+Product listings.
+Product details.
+Product search.
+Search suggestions.
+Shopping cart.
+Checkout.
+Login.
+Registration.
+Password reset.
+Customer dashboard.
+Wishlist.
+Order tracking.
+Contact page.
+About page.
+Privacy policy.
+Terms and conditions.
+Administrator login.
+Administrator dashboard.
+For every page:
+Check whether it loads correctly.
+Check whether all buttons work.
+Check whether all links navigate correctly.
+Check whether forms submit successfully.
+Check whether input validation works.
+Check whether data displays correctly.
+Check loading states.
+Check error states.
+Check empty states.
+Check mobile responsiveness.
+Identify and repair:
+Broken layouts.
+Misaligned elements.
+Missing images.
+Broken navigation.
+Non-functional buttons.
+Incorrect links.
+Form submission failures.
+Unexpected page refreshes.
+UI inconsistencies.
+Unresponsive elements.
+PHASE 3: BACKEND AND API AUDIT
+Inspect the entire backend architecture.
+Verify that:
+API endpoints exist.
+API endpoints return correct responses.
+Frontend requests reach the backend.
+Backend requests reach the database.
+Authentication middleware works.
+Authorization middleware works.
+Data validation works.
+Error handling works.
+Database queries execute correctly.
+Sensitive operations run server-side.
+Check for:
+Missing endpoints.
+Broken endpoints.
+Incorrect HTTP methods.
+Incorrect response formats.
+Missing validation.
+Unhandled exceptions.
+Duplicate API requests.
+Race conditions.
+Incorrect database operations.
+Exposed server functionality.
+Repair all identified issues.
+PHASE 4: DATABASE AUDIT
+Inspect the Firebase configuration and Firestore database architecture.
+Verify:
+Firebase initialization.
+Firestore connectivity.
+Authentication integration.
+Database collections.
+Document structures.
+Database relationships.
+Firestore security rules.
+Database indexes.
+Data retrieval.
+Data creation.
+Data updates.
+Data deletion.
+Test whether the following information persists correctly:
+Customer accounts.
+Customer profiles.
+Products.
+Categories.
+Shopping carts.
+Wishlists.
+Orders.
+Payments.
+Inventory.
+Addresses.
+Reviews.
+Coupons.
+Notifications.
+Identify and fix:
+Missing collections.
+Incorrect document structures.
+Failed database writes.
+Failed database reads.
+Incorrect permissions.
+Duplicate records.
+Data inconsistencies.
+Missing indexes.
+Incorrect security rules.
+Do not delete existing customer information or production data during testing.
+PHASE 5: CUSTOMER FUNCTIONALITY AUDIT
+Test the complete customer shopping experience.
+Authentication
+Register a new account.
+Log in.
+Log out.
+Verify email.
+Reset password.
+Test invalid credentials.
+Test protected routes.
+Product Shopping
+Browse products.
+Search for products.
+Filter products.
+Sort products.
+Open product details.
+Select product variations.
+Check stock availability.
+Shopping Cart
+Add products.
+Remove products.
+Update quantities.
+Calculate totals.
+Apply discount coupons.
+Refresh the browser and verify cart persistence.
+Checkout
+Enter customer information.
+Enter delivery information.
+Validate required fields.
+Calculate delivery fees.
+Calculate final totals.
+Submit orders.
+Customer Dashboard
+Update profile.
+View order history.
+View order details.
+Manage addresses.
+Manage wishlist.
+View notifications.
+Track orders.
+Repair all failed functionality.
+PHASE 6: ADMINISTRATOR DASHBOARD AUDIT
+Test the administrator dashboard independently.
+Verify:
+Administrator authentication.
+Administrator authorization.
+Dashboard statistics.
+Revenue calculations.
+Product management.
+Category management.
+Customer management.
+Order management.
+Inventory management.
+Coupon management.
+Payment management.
+Analytics.
+CSV exports.
+Test actual operations:
+Create a product.
+Edit a product.
+Delete a product.
+Upload product images.
+Update inventory.
+Create a discount coupon.
+View customers.
+Update order statuses.
+View payment records.
+Export reports.
+Ensure changes made in the administrator dashboard appear correctly on the customer-facing website.
+Do not allow ordinary customers to access administrative operations.
+PHASE 7: PAYMENT SYSTEM AUDIT
+Inspect the Paystack and Flutterwave integrations.
+Verify:
+Payment initialization.
+Transaction reference generation.
+Payment gateway communication.
+Server-side verification.
+Webhook authentication.
+Payment status updates.
+Failed payment handling.
+Duplicate payment prevention.
+Refund processing.
+Order creation after verified payment.
+Inventory updates after successful payment.
+Check for incorrect assumptions about payment success.
+Never mark an order as paid based solely on a frontend response.
+Use sandbox or test mode for payment testing.
+Never initiate real customer charges during automated testing.
+If credentials are missing, identify the missing configuration and complete all other possible integration work.
+PHASE 8: SECURITY AUDIT
+Conduct a security assessment.
+Inspect:
+Authentication.
+Authorization.
+Administrator privileges.
+Firestore security rules.
+API security.
+Environment variables.
+Payment credentials.
+Session management.
+Input validation.
+File uploads.
+User data access.
+Check for:
+Unauthorized database access.
+Privilege escalation.
+Exposed API secrets.
+Insecure authentication.
+XSS vulnerabilities.
+SQL injection where applicable.
+CSRF vulnerabilities where applicable.
+Insecure file uploads.
+Weak access controls.
+Sensitive information exposure.
+Missing rate limiting.
+Fix identified vulnerabilities.
+Never expose private credentials in frontend code.
+Never weaken security rules to make a feature work.
+PHASE 9: RESPONSIVENESS AND DESIGN AUDIT
+Inspect the website on different screen sizes.
+Test:
+Small mobile screens.
+Standard smartphones.
+Tablets.
+Laptops.
+Desktop monitors.
+Check:
+Navigation.
+Menus.
+Product cards.
+Product images.
+Forms.
+Buttons.
+Tables.
+Dashboard charts.
+Checkout layouts.
+Footer.
+Repair:
+Horizontal overflow.
+Broken mobile menus.
+Overlapping elements.
+Incorrect image sizing.
+Unreadable text.
+Misaligned components.
+Inconsistent spacing.
+Poor tablet layouts.
+Preserve the original brand identity and improve the visual quality where necessary.
+PHASE 10: PERFORMANCE AND SEO AUDIT
+Inspect:
+Page loading speed.
+Image optimization.
+Unnecessary rendering.
+Large dependencies.
+Duplicate requests.
+Database query efficiency.
+Caching.
+Lazy loading.
+SEO metadata.
+Product URLs.
+Sitemap.
+Robots.txt.
+Accessibility.
+Optimize the application without breaking existing functionality.
+PHASE 11: AUTOMATIC ERROR REPAIR
+After completing the scan, do not stop at producing a list of errors.
+ACTUALLY FIX THE IDENTIFIED PROBLEMS.
+Follow this priority:
+CRITICAL:
+Application crashes.
+Build failures.
+Broken authentication.
+Database connectivity failures.
+Unauthorized administrator access.
+Payment security vulnerabilities.
+Data loss risks.
+HIGH:
+Broken checkout.
+Failed order creation.
+Incorrect payment verification.
+Broken product management.
+Incorrect inventory updates.
+Broken customer dashboard.
+MEDIUM:
+Broken navigation.
+Non-functional buttons.
+Search and filtering errors.
+Notification failures.
+Mobile responsiveness problems.
+LOW:
+Minor UI inconsistencies.
+Performance improvements.
+SEO improvements.
+Accessibility improvements.
+For every issue:
+Identify the cause.
+Locate the affected file.
+Implement the correction.
+Run the relevant test.
+Confirm that the correction works.
+Check that the fix has not broken another feature.
+Do not introduce temporary workarounds that hide underlying problems.
+PHASE 12: FINAL TESTING
+After implementing all repairs, conduct another complete test.
+Verify that:
+The application builds successfully.
+All major pages load.
+Navigation works.
+Authentication works.
+Database operations work.
+Products display correctly.
+Shopping cart works.
+Checkout works.
+Orders are created correctly.
+Payment verification works in test mode.
+Inventory updates correctly.
+Customer dashboard works.
+Administrator dashboard works.
+Security rules are enforced.
+Mobile responsiveness works.
+No critical console errors remain.
+Run available automated tests and create additional tests where necessary.
+Do not claim that an untested feature works.
+PHASE 13: FINAL AUDIT REPORT
+When everything is complete, generate a detailed report containing:
+1. Overall Application Health
+Provide an overall assessment of the application.
+2. Problems Identified
+List all discovered problems.
+3. Problems Fixed
+List all successfully repaired issues.
+4. Incomplete Features
+Identify features that remain incomplete.
+5. Security Assessment
+List security vulnerabilities found and their repair status.
+6. Database Assessment
+Report database connectivity, data persistence and security status.
+7. Payment Assessment
+Report the integration and testing status of Paystack and Flutterwave.
+8. Testing Results
+Show passed, failed and blocked tests.
+9. External Configuration Required
+List any missing API credentials, Firebase configuration, deployment settings or third-party integrations.
+10. Final Application Status
+Classify the application as one of:
+READY FOR PRODUCTION.
+READY FOR STAGING / FURTHER TESTING.
+NOT READY FOR DEPLOYMENT.
+STRICT FINAL INSTRUCTIONS
+Scan the entire application, not just selected pages.
+Inspect actual source code.
+Do not assume functionality exists because a button is visible.
+Do not replace working functionality unnecessarily.
+Do not delete existing data.
+Do not use fake success responses.
+Do not bypass authentication or security.
+Do not claim tests passed when they were not executed.
+Fix problems directly in the project files.
+Preserve the existing website design and branding.
+Retest the application after making changes.
+MOST IMPORTANT:
+I am not asking you to simply tell me what is wrong with the website.
+I am instructing you to inspect it, identify the problems, repair them, test the repairs and repeat the process until no known critical or high-priority issues remain.
+Begin the full application scan now.
